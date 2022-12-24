@@ -405,13 +405,13 @@ def play_game(word_list):
 
             while True:
                 yes_no = input('Would you like to substitute a letter? ')
-                if yes_no == 'yes':
+                if yes_no.lower() == 'yes':
                     letter = input('Which letter would you like to replace: ')
                     print()
                     hand = substitute_hand(hand, letter)
                     substitue_option_used = True
                     break
-                elif yes_no == 'no':
+                elif yes_no.lower() == 'no':
                     print()
                     break
                 else:
@@ -424,12 +424,12 @@ def play_game(word_list):
 
             while True:
                 yes_no = input('Would you like to replay the hand? ')
-                if yes_no == 'yes':
+                if yes_no.lower() == 'yes':
                     print()
                     score1 = play_hand(hand, word_list)
                     replay_option_used = True
                     break
-                elif yes_no == 'no':
+                elif yes_no.lower() == 'no':
                     print()
                     break
                 else:
